@@ -1,7 +1,9 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include <xtensor/xarray.hpp>
+#include <xtensor/containers/xarray.hpp>
+#include <xtensor/generators/xbuilder.hpp>
+#include <xtensor/io/xio.hpp>
 #include <random>
 #include <sqlite3.h>
 
@@ -10,7 +12,7 @@ constexpr int NUM_ACTIONS=2;
 constexpr int LEARNING_EPISODES=500;
 constexpr double LR=0.1;
 constexpr double DISCOUNT_FACTOR=0.9;
-constexpr double EXPLORATION_RATE=0.2
+constexpr double EXPLORATION_RATE=0.2;
 
 int main() {
     xt::xarray<double> q_table = xt::zeros<double>({NUM_STATES,NUM_ACTIONS});
