@@ -1,0 +1,26 @@
+package:
+  name: 1d_gridworld
+  version: "1.0.0"
+
+source:
+  path: ..
+
+build:
+  number: 0
+
+requirements:
+  build: 
+  - {{ compiler('cxx') }}
+  - cmake
+  - make
+  - ninja
+  host:
+  - xtensor
+  - sqlite
+  run: 
+  - xtensor
+  - sqlite
+
+about:
+  home: https://github.com/esmo13/1d_gridworld
+  summary: "A C++ RL Q-Learning agent for 1d gridworld environment that exports weights to sqlite3 database."
