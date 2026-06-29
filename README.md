@@ -8,7 +8,7 @@ To build conda package use
 ```
 conda create -n builder conda-build -c conda-forge -y
 conda activate builder
-conda build recipe/ -c conda-forge
+conda-build recipe/ -c conda-forge
 ```
 To install run
 ```
